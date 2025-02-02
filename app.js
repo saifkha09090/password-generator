@@ -28,9 +28,12 @@ function generatePassword() {
     return;
     }
   let password = "";
+  if (passwordLength > 20) {
+    alert("please give me password length less then 20")
+  }else{
   for (let i = 0; i < passwordLength; i++) {
     let random = Math.round(Math.random() * (characters.length - 1));
     password += characters[random];
-  }
+  }}
   passwordOutput.value = password;
 }
